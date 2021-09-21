@@ -7,7 +7,7 @@
       </p>
       <button class="button btn">Start Looking</button>
     </div>
-    <img src="~static/svg/fire-extinguisher.svg" alt="Extinguisher image" />
+    <img data-src="~static/svg/fire-extinguisher.svg" alt="Extinguisher image" v-lazy-load />
   </div>
 </template>
 <script>

@@ -1,9 +1,10 @@
 <template>
   <NuxtLink :to="`/products/${card.id}`" class="card">
     <img
-      :src="require(`@/static/images/${card.image || 'fe1.jpg'}`)"
+      :data-src="require(`@/static/images/${card.image || 'fe1.jpg'}`)"
+      alt="Extinguisher image"
+      v-lazy-load
       class="image"
-      alt="card iamge"
     />
     <h3 class="header">
       {{ card.title }}
