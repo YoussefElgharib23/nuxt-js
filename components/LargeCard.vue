@@ -1,0 +1,47 @@
+<template>
+  <NuxtLink :to="`/products/${card.id}`" class="card">
+    <img
+      :src="require(`@/static/images/${card.image || 'fe1.jpg'}`)"
+      class="image"
+      alt="card iamge"
+    />
+    <h3 class="header">
+      {{ card.title }}
+    </h3>
+    <p class="snippet">
+      {{ card.snippet }}
+    </p>
+  </NuxtLink>
+</template>
+<script>
+export default {
+  props: {
+    card: Object,
+  },
+};
+</script>
+<style scoped>
+.card {
+  width: 31.5%;
+  height: 25rem;
+  border: none;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+}
+.image {
+  height: 65%;
+  border-radius: 0.5rem;
+}
+.header {
+  font-size: 1.15rem;
+  margin-top: 0.4rem;
+  color: black;
+}
+.card:hover {
+  text-decoration: none !important;
+}
+.snippet {
+  color: grey;
+}
+</style>
